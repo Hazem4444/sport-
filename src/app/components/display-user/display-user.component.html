@@ -1,0 +1,13 @@
+<app-banner2 title="User Profile"></app-banner2>
+<div class="custom-media d-flex" style="margin:100px;">
+    <div class="img mr-4">
+        <img [src]="user.avatar" alt="Image" class="img-fluid">
+    </div>
+    <div class="text">
+        <span class="meta">May 20, 2020</span>
+        <h3 class="mb-4">{{user.fname}} <a href="#"></a></h3>
+        <h3 class="mb-4">{{user.lname}} <a href="#"></a></h3>
+        <p>{{user.email}} </p>
+        <p><a href="#">edit</a></p>
+    </div>
+</div>

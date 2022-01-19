@@ -1,0 +1,12 @@
+<app-banner2 title="All Teams"></app-banner2>
+  <div class="site-section bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 container" *ngFor ="let team of Teams" style="margin-top: 50px; ">
+               <app-team [teamsInput]="team" ></app-team>
+            </div>
+          
+        </div>
+    </div>
+</div> 
+

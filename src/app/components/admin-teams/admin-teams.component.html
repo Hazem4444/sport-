@@ -1,0 +1,29 @@
+ <h1 style="text-align: center;">Teams</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Team One</th>
+      <th scope="col">Country</th>
+      <th scope="col">Date</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let team of Teams">
+      <th scope="row">{{team.id}}</th>
+
+      <td>{{team.TeamName}}</td>
+      <td>{{team.Foundation}}</td>
+      <td>{{team.Country}}</td>
+      <td>{{team.Date}}</td>
+      <td> <button class="btn btn-success" (click)=goToDisplayTeam(team.id)> <i class="fas fa-tv"></i></button>
+        <button class="btn btn-info"><i class="fas fa-edit"></i></button>
+        <button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>

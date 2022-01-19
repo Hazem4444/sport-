@@ -1,0 +1,32 @@
+<h1 style="text-align: center;">Users</h1>
+<table class="table">
+
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">First name</th>
+        <th scope="col">Last name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor ="let user of users">
+        <th scope="row">{{user.id}}</th>
+        <td>{{user.fname}} </td>
+        <td>{{user.lname}}</td>
+        <td>{{user.email}}</td>
+    
+        <td>
+          <button class="btn btn-success" (click)="goToDisplayUser(user.id)"><i class="fas fa-tv"></i></button>
+          <button class="btn btn-info" ><i class="fas fa-edit"></i></button>
+          <button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+        </td>
+      </tr>
+     
+    </tbody>
+  </table>
+
+
+  
+   

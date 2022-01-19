@@ -1,0 +1,13 @@
+<app-banner2 title="All Players"></app-banner2>
+<div class="latest-news">
+    <div class="container">
+ 
+        <div class="row no-gutters">
+            <div class="col-md-6"  *ngFor ="let player of playersTab" style="margin-top: 30px; padding-right: 10px;" >
+             
+           <app-player [inputPlayers]="player"></app-player>
+        </div>
+
+    </div>
+</div>
+

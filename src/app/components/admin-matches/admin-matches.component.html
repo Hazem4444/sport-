@@ -1,0 +1,63 @@
+<!-- <h1 style="text-align: center;">Matches</h1> -->
+<table class="table">
+
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Team One</th>
+        <th scope="col">Team Two</th>
+        <th scope="col">Score One</th>
+        <th scope="col">Score Two</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor ="let match of matches">
+        <th scope="row">{{match._id}}</th>
+        <td>{{match.teamOne}}</td>
+        <td>{{match.teamTwo}}</td>
+        <td>{{match.scoreOne}}</td>
+        <td>{{match.scoreTwo}}</td>
+        <td>{{match.date}}</td>
+        <td>{{match.percent}}</td>
+        <td>
+          <button class="btn btn-success" (click)="goToDisplayMatch(match._id)"><i class="fas fa-tv"></i></button>
+          <button class="btn btn-info" (click)="goToEditMatch(match._id)"><i class="fas fa-edit"></i></button>
+          <button class="btn btn-danger" (click)="deleteMatch(match._id)"><i class="fas fa-trash-alt"></i></button>
+        </td>
+      </tr>
+     
+    </tbody>
+  </table>
+
+
+  <!-- <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">PU</th>
+        <th scope="col">NB</th>
+        <th scope="col">PHT</th>
+        <th scope="col">TTC</th>
+       
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor ="let match of matches">
+        <th scope="row">{{match.id}}</th>
+        <td>{{match.pu}}</td>
+        <td>{{match.nb}}</td>
+        <td>{{match.pht}}</td>
+        <td>{{match.pht| ttc}}</td>
+      
+       
+        <td>
+          <button class="btn btn-success"> <i class="fas fa-tv"></i></button>
+          <button class="btn btn-info"><i class="fas fa-edit"></i></button>
+          <button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+        </td>
+      </tr>
+     
+    </tbody>
+  </table> -->

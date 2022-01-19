@@ -1,0 +1,74 @@
+<app-banner2 title="Signup"></app-banner2>
+
+<h1 style="margin-top: 20px;">Signup</h1>
+<form [formGroup]="SignupForm" style="margin-bottom: 20px;">
+  <div class="mb-3 col-lg-4 container">
+    <label class="form-label">First Name</label>
+    <input type="text" class="form-control" formControlName="fName">
+  </div>
+  <div
+    *ngIf="SignupForm.controls['fName'].invalid && ( SignupForm.controls['fName'].dirty || SignupForm.controls['fName'].touched ) ">
+    <div *ngIf="SignupForm.controls['fName'].errors.required" class="ereur">
+      First Name required
+    </div>
+    <div *ngIf="SignupForm.controls['fName'].errors.minlength" class="ereur">
+      The first name must be at least 3 characters 
+    </div>
+  </div>
+  <div class="mb-3 col-lg-4 container">
+    <label class="form-label">Last Name</label>
+    <input type="text" class="form-control" formControlName="lName">
+  </div>
+  <div
+    *ngIf="SignupForm.controls['lName'].invalid && ( SignupForm.controls['lName'].dirty || SignupForm.controls['lName'].touched ) ">
+    <div *ngIf="SignupForm.controls['lName'].errors.required" class="ereur">
+      Last Name required
+    </div>
+    <div *ngIf="SignupForm.controls['lName'].errors.minlength" class="ereur">
+      The last name must be at least 3 characters 
+    </div>
+  </div>
+
+  <div class="mb-3 col-lg-4 container">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" formControlName="email">
+  </div>
+  <div
+    *ngIf="SignupForm.controls['email'].invalid && ( SignupForm.controls['email'].dirty || SignupForm.controls['email'].touched ) ">
+    <div *ngIf="SignupForm.controls['email'].errors.required" class="ereur">
+      Email required
+    </div>
+    <div *ngIf="SignupForm.controls['email'].errors.email" class="ereur">
+      Email Muste be Correct
+    </div>
+  </div>
+  <div class="mb-3 col-lg-4 container">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" formControlName="pwd">
+  </div>
+  <div
+    *ngIf="SignupForm.controls['pwd'].invalid && ( SignupForm.controls['pwd'].dirty || SignupForm.controls['pwd'].touched ) ">
+    <div *ngIf="SignupForm.controls['pwd'].errors.required" class="ereur">
+      Password required
+    </div>
+    <div *ngIf="SignupForm.controls['pwd'].errors.minlength || SignupForm.controls['pwd'].errors.maxlength"
+      class="ereur">
+      Password Muste be Between 6 and 12 chars
+    </div>
+  </div>
+  <div class="mb-3 col-lg-4 container">
+    <label for="exampleInputPassword1" class="form-label"> Confirm Password</label>
+    <input type="password" class="form-control" formControlName="cpwd">
+  </div>
+  <div *ngIf="SignupForm.controls['cpwd'].invalid &&
+  (SignupForm.controls['cpwd'].dirty ||
+ SignupForm.controls['cpwd'].touched)">
+  <div
+ *ngIf="SignupForm.controls['cpwd'].errors.mustMatch" class="ereur">
+  Confirm password must match password
+  </div>
+ </div> <br>
+  <div class="container text-center">
+    <button type="submit" (click)="signup()" class="btn btn-primary py-3 px-5">Signup</button>
+  </div>
+</form>

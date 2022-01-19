@@ -1,0 +1,19 @@
+
+  <app-banner2 title="Player Status"></app-banner2>
+
+  <h1 style="margin-top: 20px;  text-align:center">Player Status</h1> 
+  <form #statusForm="ngForm" (ngSubmit)="calculer()" style="margin-bottom: 20px;">
+      <div class="mb-3 col-lg-4 container">
+        <label for="exampleInputEmail1" class="form-label">Height (cm)</label>
+        <input type="number" class="form-control" [(ngModel)]="status.height" [ngModelOptions]="{standalone: true}">
+        
+      </div>
+      <div class="mb-3 col-lg-4 container">
+        <label for="exampleInputPassword1" class="form-label">Weight (kg)</label>
+        <input type="number" class="form-control" [(ngModel)]="status.weight" [ngModelOptions]="{standalone: true}">
+      </div>
+     <div class="mb-3 col-lg-4 container text-center">
+      <button type="submit" class="btn btn-primary py-3 px-5">Calculer</button></div>
+    </form>
+  {{result.imc}} <br> <br>
+  {{result.message}}

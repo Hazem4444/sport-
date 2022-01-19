@@ -1,0 +1,10 @@
+section{
+    display: flex;
+}
+article{
+    margin: auto;
+    width: 30%;
+}
+h1{
+    text-align:center;
+}

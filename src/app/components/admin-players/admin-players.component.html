@@ -1,0 +1,30 @@
+ <h1 style="text-align: center;">Players</h1> 
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Post</th>
+      <th scope="col">Age</th>
+      <th scope="col">Number</th>
+      <th scope="col">Note</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let player of players">
+      <th scope="row">{{player.id}}</th>
+      <td>{{player.name}}</td>
+      <td>{{player.post}}</td>
+      <td>{{player.age}}</td>
+      <td>{{player.nbr}}</td>
+      <td>{{player.note}}</td>
+      <td> <button class="btn btn-success" (click)="goToDisplayPlayer(player.id)"> <i class="fas fa-tv"></i></button>
+        <button class="btn btn-info" (click)="goToEditPlayer(player.id)"><i class="fas fa-edit"></i></button>
+        <button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>

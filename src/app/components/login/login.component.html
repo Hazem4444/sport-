@@ -1,0 +1,20 @@
+
+  <app-banner2 title="Login"></app-banner2>
+
+<h1 style="margin-top: 20px;">Login</h1> 
+<form #loginForm="ngForm" (ngSubmit)="login()" style="margin-bottom: 20px;">
+    <div class="mb-3 col-lg-4 container">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}">
+      
+    </div>
+    <div class="mb-3 col-lg-4 container">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" [(ngModel)]="user.pwd" [ngModelOptions]="{standalone: true}">
+    </div>
+   <div class="mb-3 col-lg-4 container text-center">
+    <button type="submit" class="btn btn-primary py-3 px-5">Login</button></div>
+  </form>
+<div style="color: red; text-align: center;">
+  {{errorMsg}}
+</div>

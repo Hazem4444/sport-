@@ -1,0 +1,33 @@
+<app-banner2 title="Add team"></app-banner2>
+<h1 style="text-align: center; margin-top: 20px;">Add Team</h1>
+<form #addTeamForm="ngForm" (ngSubmit)="addTeam()" style="margin-top: 25px;">
+  <div class="mb-3 col-lg-4 container">
+
+    <input type="text" class="form-control" [(ngModel)]="team.name" [ngModelOptions]="{standalone: true}" placeholder="Name">
+
+   </div>
+   <div class="mb-3 col-lg-4 container">
+
+    <input type="number" class="form-control" [(ngModel)]="team.foundation" [ngModelOptions]="{standalone: true}"  placeholder="Foundation">
+
+    </div>
+     <div class="mb-3 col-lg-4 container">
+
+    <input type="text" class="form-control" [(ngModel)]="team.country " [ngModelOptions]="{standalone: true}" placeholder="Country">
+
+     </div>
+    <div class="mb-3 col-lg-4 container">
+    <input type="text" class="form-control" [(ngModel)]="team.staduim" [ngModelOptions]="{standalone: true}"  placeholder="Stadium">
+    </div>
+    <div class="mb-3 col-lg-4 container text-center">
+      <button class="btn btn-success py-3 px-5" (click)="filePicker.click()">Logo</button>
+      <img src="imagePreview" alt="">
+    </div>
+    <div class="mb-3 col-lg-4 container" style="visibility: hidden;">
+      <input type="file" class="form-control" #filePicker (change)="onImageSelected()">
+      </div>
+
+    <div class="mb-3 col-lg-4 container text-center">
+    <button type="submit" class="btn btn-primary py-3 px-5">Add team</button>
+  </div>
+</form>
